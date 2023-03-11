@@ -6,12 +6,14 @@
   - Do not edit any of the existing code
 */
 
-let pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
+let pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, 'whoops'];
 
-let pairsByIndex; // Complete this statement
+let pairsByIndex = pairsByIndexRaw.filter((e) => {
+  return Array.isArray(e) && e.length === 2;
+});
 
-let students = ["Islam", "Lesley", "Harun", "Rukmini"];
-let mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
+let students = ['Islam', 'Lesley', 'Harun', 'Rukmini'];
+let mentors = ['Daniel', 'Irina', 'Mozafar', 'Luke'];
 
 let pairs = pairsByIndex.map(function (indexes) {
   let student = students[indexes[0]];
